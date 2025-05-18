@@ -1,0 +1,109 @@
+body {
+    /* Krok 1: Flexbox dla body */
+     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif; 
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    /* Krok 2: Flexbox dla menu */
+     display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+nav li {
+    /* margin-right: 20px; - opcjonalnie, dla odstępów w menu */
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.gallery {
+    /* Krok 3: Flexbox dla galerii */
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px; 
+}
+
+.gallery img {
+    /* Krok 4: Stylizacja zdjęć */
+     width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.about {
+    /* Krok 5: Stylizacja "O mnie" */
+    padding: 40px;
+    text-align: center; 
+}
+
+footer {
+    /* Krok 6: Stylizacja stopki */
+     background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc; 
+}
+
+/* Zadanie 1: Responsywna galeria */
+@media (min-width: 1200px) {
+    .gallery img {
+        width: 250px;
+    }
+} 
+
+/* Zadanie 2: Podpisy pod zdjęciami - style dla figcaption */
+ figcaption {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    padding-top: 5px;
+} 
+
+/* Zadanie 3: Sekcja "O mnie" - zdjęcie obok tekstu */
+ .about {
+    display: flex;
+    align-items: center;
+}
+.about img {
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 50%;
+} 
+
+/* Zadanie 4: Responsywne menu - hamburger */
+ @media (max-width: 768px) {
+    nav ul {
+        display: none; 
+    }
+    
+    
+} 
